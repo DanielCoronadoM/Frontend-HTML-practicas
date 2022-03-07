@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake´s Buy</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Estilo de header */
+        header {
+            background-color: #612D55;
+            padding: 20px;
+            text-align: center;
+            font-size: 35px;
+            font-family: inherit;
+            color: white;
+            }
+        
+        imagenes {
+            float: left;
+            padding: 20px;
+            width: 100%;
+            background-color: #f1f1f1;
+            height: 300px;
+        }
+
+        /* Crear 2 columnas con la misma posición en la fila */
+        sabores {
+            float: left;
+            width: 33%;
+            height: 250px;
+            /* only for demonstration, should be removed */
+            background: #C693C7;
+            padding: 20px;
+        }
+        cubiertas {
+            float: left;
+            width: 34%;
+            height: 250px;
+            /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+        toppings {
+            float: right;
+            width: 33%;
+            height: 250px;
+            /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        
+        formulario {
+            float: right;
+            padding: 25px;
+            width: 100%;
+            background-color: #f1f1f1;
+            height: auto;
+        }
+
+        contacto {
+            content: "";
+            display: table;
+            width: 100%;
+            padding: 25px;
+            height: auto;
+            clear: both;
+            background-color: #ccc;
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+            background-color: #ccc;
+        }
+
+        /* Estilo de footer */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+
+            sabores,
+            cubiertas,
+            toppings {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div header></div>
+    <header>
+        <img src="Logo.png" alt="Logo" width="80px">
+        <H1>CAKE´S BUY</H1> 
+    </header>
+
+    <div>
+        <h2>Aquí van las imagenes</h2>
+
+    </div>
+    <div>
+        <sabores>
+            <h2>Sabores</h2>
+            <ul>
+                <li>Vainilla ........... $80</li>
+                <li>Fresa .............. $80</li> 
+                <li>Limón .............. $80</li>
+                <li>Chocolate .......... $80</li>
+                <li>Red Velvet ......... $80</li>
+                <li>Naranja ............ $80</li>
+                <li>Tres leches ........ $80</li>
+            </ul>
+        </sabores>
+        <cubiertas>
+            <h2>Cubiertas</h2>
+            <ul>
+                <li>Coco ............... $80</li>
+                <li>Chocolate .......... $80</li>
+                <li>Chocolate blanco ... $80</li>
+                <li>Caramelo ........... $80</li>
+                <li>Fondant ............ $80</li>
+            </ul> 
+        </cubiertas>
+        <toppings>
+            <h2>Topppings</h2>
+            <ul>
+                <li>Fresas ............... $80</li>
+                <li>Nuez ............... $80</li>
+                <li>Zarzamora ............... $80</li>
+                <li>Ralladura de Coco ............... $80</li>
+                <li>Chocolate Ferrero ............... $80</li>
+            </ul> 
+        </toppings>
+    </div>
+           
+    
+    <formulario>
+        <h2>¡Arma tu pastel!</h2>
+        <form action="/pedido.js" id="pedido" method="post">
+            
+            <p>Combina tus sabores preferidos</p>
+            <input type="checkbox" id="sabor1" name="sabor1" value="Vainilla">
+            <label for="sabor1">Vainilla</label><br>
+            <input type="checkbox" id="sabor2" name="sabor2" value="Fresa">
+            <label for="sabor2">Fresa</label><br>
+            <input type="checkbox" id="sabor3" name="sabor3" value="Limón">
+            <label for="sabor3">Limón</label><br>
+            <input type="checkbox" id="sabor4" name="sabor4" value="Chocolate">
+            <label for="sabor4">Chocolate</label><br>
+            <input type="checkbox" id="sabor5" name="sabor5" value="Redvelvet">
+            <label for="sabor5">Red Velvet</label><br>
+            <input type="checkbox" id="sabor6" name="sabor6" value="Naranja">
+            <label for="sabor6">Naranja</label><br>
+            <input type="checkbox" id="sabor7" name="sabor7" value="3leches">
+            <label for="sabor7">Tres leches</label><br>
+            <br><hr>
+
+            <p>Selecciona la cubierta</p>
+            <label for="cubierta">Cubierta de:</label>
+            <select id="cubierta" name="cubierta">
+                <option value="coco">Coco</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="chocoblanco">Chocolate blanco</option>
+                <option value="caramelo">Caramelo</option>
+                <option value="fondant">Fondant</option>
+            </select><br><br><hr>
+
+            <p>Topppings (Decoraciones)</p>
+            <input type="checkbox" id="topping1" name="topping1" value="fresas">
+            <label for="topping1">Fresas</label><br>
+            <input type="checkbox" id="topping2" name="topping2" value="nueces">
+            <label for="topping2">Nueces</label><br>
+            <input type="checkbox" id="topping3" name="topping3" value="zarzamora">
+            <label for="topping3">Zarzamoras</label><br>
+            <input type="checkbox" id="topping4" name="topping4" value="ralladcoco">
+            <label for="topping4">Ralladura de Coco</label><br>
+            <input type="checkbox" id="topping5" name="topping5" value="ferrero">
+            <label for="topping5">Chocolate Ferrero</label><br><br><hr>
+
+            <p>Instrucciones adicionales:</p>
+            <input type="text" id="instrucciones" name="instrucciones" height="20px" form="pedido"><br><br><hr>
+
+
+             
+            
+            <p>Ahora tus datos</p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" form="pedido"><br><br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" form="pedido"><br><br>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" maxlength="10" form="pedido"><br><br>
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" form="pedido"><br><br>
+            
+            <input type="submit" value="¡Hacer pedido!">
+            <input type="reset">
+
+
+            
+            
+        </form>
+    </formulario>
+    <contacto>
+        <p>Contacto:</p>
+        <p>Av. Pastelillo dulce No. 4834 Col. caramelo, Puebla Pue.</p>
+        <p>Horario de atención: Lunes a Sabado de 8:00 a 20:00 hrs</p>
+        <p>Correo: cakesbuy@contacto.com.mx</p>
+        <p>Teléfono: 9937740275</p>
+
+
+    </contacto>
+    
+    <div>
+        <footer>
+            <p>Pie de página</p>
+        </footer>
+    </div>
+    
+</body>
+</html>

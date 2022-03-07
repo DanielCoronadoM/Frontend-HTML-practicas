@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake´s Buy (Pastelero)</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: #612D55;
+            padding: 25px;
+            text-align: center;
+            font-size: 35px;
+            font-family: inherit;
+            color: white;
+            }
+
+        pedidos {
+            
+            float: left;
+            width: 100%;
+            padding: 25px;
+            height: auto;
+            
+            background-color: #ccc;
+        }
+
+        inventario {
+            display: table;
+            width: 100%;
+            padding: 25px;
+            height: auto;
+            background: #C693C7;
+            
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+
+            pedidos,
+            inventario{
+                width: 100%;
+                height: auto;
+        }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Logo.png" alt="Logo" width="80px">
+        <H1>CAKE´S BUY</H1>
+    </header>
+
+    <pedidos>
+        <h1>Pedidos</h1>
+        <table>
+            <tr>
+                <th>No.</th>
+                <th>Sabores</th>
+                <th>Cubierta</th>
+                <th>Toppings</th>
+                <th>Instrucciones</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Limón, Naranja</td>
+                <td>Fondant</td>
+                <td>Ralladura de Coco</td>
+                <td>Ninguna en especifico</td>
+            </tr>
+        </table>
+    </pedidos>
+
+    <inventario>
+        <h1>Producto (restante) disponible</h1>
+        <h2>Sabores</h2>
+        <table>
+            <tr>
+                <th>Vainilla</th>
+                <th>Fresa</th>
+                <th>Limón</th>
+                <th>Chocolate</th>
+                <th>Red Velvet</th>
+                <th>Naranja</th>
+                <th>Tres leches</th>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>34</td>
+                <td>14</td>
+                <td>20</td>
+                <td>11</td>
+                <td>23</td>
+                <td>8</td>
+            </tr>
+        </table>
+
+        <h2>Toppings</h2>
+        <table>
+            <tr>
+                <th>Fresas</th>
+                <th>Nuéz</th>
+                <th>Zarzamora</th>
+                <th>Ralldura de Coco</th>
+                <th>Chocolate Ferrero</th>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>34</td>
+                <td>14</td>
+                <td>20</td>
+                <td>11</td>
+            </tr>
+        </table>
+    </inventario>
+    
+</body>
+</html>
